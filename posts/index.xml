@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Simple Examples</title>
+    <link>https://tmichoel.github.io/simple-examples/posts/</link>
+    <description>Recent content in Posts on Simple Examples</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 28 Oct 2021 21:04:50 +0200</lastBuildDate>
+    
+	<atom:link href="https://tmichoel.github.io/simple-examples/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    
+    
+    <item>
+      <title>Mathjax Test</title>
+      <link>https://tmichoel.github.io/simple-examples/mathjax-test/</link>
+      <pubDate>Thu, 28 Oct 2021 21:04:50 +0200</pubDate>
+      
+      <guid>https://tmichoel.github.io/simple-examples/mathjax-test/</guid>
+      <description>&lt;p&gt;For my own future reference, &lt;a href=&#34;https://geoffruddock.com/math-typesetting-in-hugo/&#34;&gt;this approach&lt;/a&gt; to enable &lt;a href=&#34;https://www.mathjax.org/&#34;&gt;MathJax&lt;/a&gt; in &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; works (with the minor edit that step 2 needed to be applied to the file &amp;ldquo;head.html&amp;rdquo; instead of &amp;ldquo;header.html&amp;rdquo;).&lt;/p&gt;
+&lt;p&gt;Inline math &lt;code&gt;$E=mc^2$&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Display math:&lt;/p&gt;
+&lt;p&gt;$$f(x)=\int_0^x \sqrt{x-y} \sin(y) dy$$&lt;/p&gt;
+</description>
+    </item>
+    
+    
+  </channel>
+</rss>
