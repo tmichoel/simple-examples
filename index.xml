@@ -25,6 +25,7 @@
 &lt;p&gt;Display math:&lt;/p&gt;
 &lt;p&gt;$$f(x)=\int_0^x \sqrt{x-y} \sin(y) dy$$&lt;/p&gt;
 &lt;p&gt;$$p\wedge q \to r$$&lt;/p&gt;
+&lt;p&gt;To set things up on Github, I followed &lt;a href=&#34;https://www.mytechramblings.com/posts/create-a-website-with-hugo-and-gh/&#34;&gt;these instructions&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
