@@ -14,17 +14,22 @@
     
     
     <item>
-      <title>Mathjax Test</title>
-      <link>https://tmichoel.github.io/simple-examples/mathjax-test/</link>
+      <title>Hugo configuration</title>
+      <link>https://tmichoel.github.io/simple-examples/hugo-configuration/</link>
       <pubDate>Thu, 28 Oct 2021 21:04:50 +0200</pubDate>
       
-      <guid>https://tmichoel.github.io/simple-examples/mathjax-test/</guid>
-      <description>&lt;p&gt;For my own future reference, &lt;a href=&#34;https://geoffruddock.com/math-typesetting-in-hugo/&#34;&gt;this approach&lt;/a&gt; to enable &lt;a href=&#34;https://www.mathjax.org/&#34;&gt;MathJax&lt;/a&gt; in &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; works (with the minor edit that step 2 needed to be applied to the file &amp;ldquo;head.html&amp;rdquo; instead of &amp;ldquo;header.html&amp;rdquo;).&lt;/p&gt;
+      <guid>https://tmichoel.github.io/simple-examples/hugo-configuration/</guid>
+      <description>&lt;h1 id=&#34;hugo&#34;&gt;Hugo&lt;/h1&gt;
+&lt;p&gt;This site is written in &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;mathjax&#34;&gt;MathJax&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://geoffruddock.com/math-typesetting-in-hugo/&#34;&gt;This approach&lt;/a&gt; was used to enable &lt;a href=&#34;https://www.mathjax.org/&#34;&gt;MathJax&lt;/a&gt; (with the minor edit that step 2 needed to be applied to the file &amp;ldquo;head.html&amp;rdquo; instead of &amp;ldquo;header.html&amp;rdquo;).&lt;/p&gt;
 &lt;p&gt;Inline math &lt;code&gt;$E=mc^2$&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Display math:&lt;/p&gt;
 &lt;p&gt;$$f(x)=\int_0^x \sqrt{x-y} \sin(y) dy$$&lt;/p&gt;
 &lt;p&gt;$$p\wedge q \to r$$&lt;/p&gt;
+&lt;h1 id=&#34;github&#34;&gt;Github&lt;/h1&gt;
 &lt;p&gt;To set things up on Github, I followed &lt;a href=&#34;https://www.mytechramblings.com/posts/create-a-website-with-hugo-and-gh/&#34;&gt;these instructions&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;comments-and-discussion&#34;&gt;Comments and discussion&lt;/h1&gt;
 </description>
     </item>
     
