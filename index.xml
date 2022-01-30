@@ -30,8 +30,9 @@
 &lt;p&gt;$$p\wedge q \to r$$&lt;/p&gt;
 &lt;h1 id=&#34;github&#34;&gt;Github&lt;/h1&gt;
 &lt;p&gt;To set things up on Github, I followed &lt;a href=&#34;https://www.mytechramblings.com/posts/create-a-website-with-hugo-and-gh/&#34;&gt;these instructions&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;images&#34;&gt;Images&lt;/h1&gt;
 &lt;h1 id=&#34;comments-and-discussion&#34;&gt;Comments and discussion&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://zhauniarovich.com/post/2021/2021-06-giscus/&#34;&gt;Tutorial&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Mostly I followed this &lt;a href=&#34;https://zhauniarovich.com/post/2021/2021-06-giscus/&#34;&gt;tutorial&lt;/a&gt; to set up &lt;a href=&#34;https://giscus.app&#34;&gt;giscus&lt;/a&gt;, upto the configuration of giscus parameters in the hugo configuration file.&lt;/p&gt;
 </description>
     </item>
     
