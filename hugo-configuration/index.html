@@ -63,7 +63,36 @@
 <p>To set things up on Github, I followed <a href="https://www.mytechramblings.com/posts/create-a-website-with-hugo-and-gh/">these instructions</a>.</p>
 <h1 id="images">Images</h1>
 <h1 id="comments-and-discussion">Comments and discussion</h1>
-<p>Mostly I followed this <a href="https://zhauniarovich.com/post/2021/2021-06-giscus/">tutorial</a> to set up <a href="https://giscus.app">giscus</a>, upto the configuration of giscus parameters in the hugo configuration file.</p>
+<p>Mostly I followed this <a href="https://zhauniarovich.com/post/2021/2021-06-giscus/">tutorial</a> to set up <a href="https://giscus.app">giscus</a>, upto the configuration of giscus parameters in the hugo configuration file. There instead I set the following in the <code>[params]</code> section (replace <code>&quot;repo_id&quot;</code> etc. by the correct values):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">[</span><span class="err">params</span><span class="p">]</span>
+  <span class="err">#</span> <span class="err">Other</span> <span class="err">parameters</span>
+  <span class="err">...</span>
+  <span class="err">#</span> <span class="err">Giscus</span> <span class="err">paramaters</span>
+  <span class="err">giscus_commentable</span> <span class="err">=</span> <span class="p">{</span><span class="err">page</span> <span class="err">=</span> <span class="err">true,</span> <span class="err">post</span> <span class="err">=</span> <span class="err">true</span><span class="p">}</span>
+  <span class="err">giscus_repo</span> <span class="err">=</span> <span class="s2">&#34;repo_name&#34;</span>
+  <span class="err">giscus_repo_id</span> <span class="err">=</span> <span class="s2">&#34;repo_id&#34;</span> 
+  <span class="err">giscus_category</span> <span class="err">=</span> <span class="s2">&#34;Announcements&#34;</span>
+  <span class="err">giscus_category_id</span> <span class="err">=</span> <span class="s2">&#34;category_id&#34;</span>
+  <span class="err">giscus_mapping</span> <span class="err">=</span> <span class="s2">&#34;pathname&#34;</span>
+  <span class="err">giscus_label</span> <span class="err">=</span> <span class="s2">&#34;comment&#34;</span>
+  <span class="err">giscus_theme</span> <span class="err">=</span> <span class="s2">&#34;preferred_color_scheme&#34;</span>
+  <span class="err">giscus_reactions_enabled</span> <span class="err">=</span> <span class="mi">0</span>
+</code></pre></div><p>These parameters are read by a <code>giscus.html</code> file stored in the <code>layouts/partials/</code> of the theme containing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="err">&lt;script</span> <span class="err">src=</span><span class="s2">&#34;https://giscus.app/client.js&#34;</span>
+        <span class="err">data-repo=</span><span class="s2">&#34;{{site.Params.giscus_repo}}&#34;</span>
+        <span class="err">data-repo-id=</span><span class="s2">&#34;{{site.Params.giscus_repo_id}}&#34;</span>
+        <span class="err">data-category=</span><span class="s2">&#34;{{site.Params.giscus_category}}&#34;</span>
+        <span class="err">data-category-id=</span><span class="s2">&#34;{{site.Params.giscus_category_id}}&#34;</span>
+        <span class="err">data-mapping=</span><span class="s2">&#34;{{site.Params.giscus_mapping}}&#34;</span>
+        <span class="err">data-reactions-enabled=</span><span class="s2">&#34;{{site.Params.giscus_reactions_enabled}}&#34;</span>
+        <span class="err">data-theme=</span><span class="s2">&#34;{{site.Params.giscus_theme}}&#34;</span>
+        <span class="err">crossorigin=</span><span class="s2">&#34;anonymous&#34;</span>
+        <span class="err">async&gt;</span>
+<span class="err">&lt;/script&gt;</span>
+<span class="err">&lt;noscript&gt;Please</span> <span class="err">enable</span> <span class="err">JavaScript</span> <span class="err">to</span> <span class="err">view</span> <span class="err">the</span> <span class="err">comments</span> <span class="err">powered</span> <span class="err">by</span> <span class="err">giscus.&lt;/noscript&gt;</span>
+</code></pre></div><p>Finally I added the following line at the bottom of the file <code>layouts/partials/footer.html</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span><span class="err">{</span> <span class="err">if</span> <span class="err">.Params.giscus</span> <span class="p">}</span><span class="err">}</span><span class="p">{</span><span class="err">{</span> <span class="err">partial</span> <span class="nt">&#34;giscus.html&#34;</span> <span class="err">.</span> <span class="p">}</span><span class="err">}</span><span class="p">{</span><span class="err">{</span> <span class="err">end</span> <span class="p">}</span><span class="err">}</span>
+</code></pre></div><p>Now if you set <code>giscus: true</code> in the header of a post (similar to the MathJax solution above), comments should appear on that post.</p>
 </article>
 
         </main><footer id="footer">
