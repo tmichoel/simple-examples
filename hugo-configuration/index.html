@@ -54,7 +54,7 @@
     </header><h1 id="hugo">Hugo</h1>
 <p>This site is written in <a href="https://gohugo.io/">Hugo</a>.</p>
 <h1 id="mathjax">MathJax</h1>
-<p><a href="https://geoffruddock.com/math-typesetting-in-hugo/">This approach</a> was used to enable <a href="https://www.mathjax.org/">MathJax</a>, with the minor edit that step 2 needed to be applied to the file &ldquo;head.html&rdquo; instead of &ldquo;header.html&rdquo; (this seems to be specific to the <a href="https://github.com/LukasJoswiak/etch">etch theme</a>).</p>
+<p>I used <a href="https://geoffruddock.com/math-typesetting-in-hugo/">this approach</a> to enable <a href="https://www.mathjax.org/">MathJax</a>, with the minor edit that step 2 needed to be applied to the file &ldquo;head.html&rdquo; instead of &ldquo;header.html&rdquo; (this seems to be specific to the <a href="https://github.com/LukasJoswiak/etch">etch theme</a>).</p>
 <p>Inline math <code>$E=mc^2$</code>.</p>
 <p>Display math:</p>
 <p>$$f(x)=\int_0^x \sqrt{x-y} \sin(y) dy$$</p>
@@ -78,18 +78,18 @@
   <span class="err">giscus_theme</span> <span class="err">=</span> <span class="s2">&#34;preferred_color_scheme&#34;</span>
   <span class="err">giscus_reactions_enabled</span> <span class="err">=</span> <span class="mi">0</span>
 </code></pre></div><p>These parameters are read by a <code>giscus.html</code> file stored in the <code>layouts/partials/</code> of the theme containing:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="err">&lt;script</span> <span class="err">src=</span><span class="s2">&#34;https://giscus.app/client.js&#34;</span>
-        <span class="err">data-repo=</span><span class="s2">&#34;{{site.Params.giscus_repo}}&#34;</span>
-        <span class="err">data-repo-id=</span><span class="s2">&#34;{{site.Params.giscus_repo_id}}&#34;</span>
-        <span class="err">data-category=</span><span class="s2">&#34;{{site.Params.giscus_category}}&#34;</span>
-        <span class="err">data-category-id=</span><span class="s2">&#34;{{site.Params.giscus_category_id}}&#34;</span>
-        <span class="err">data-mapping=</span><span class="s2">&#34;{{site.Params.giscus_mapping}}&#34;</span>
-        <span class="err">data-reactions-enabled=</span><span class="s2">&#34;{{site.Params.giscus_reactions_enabled}}&#34;</span>
-        <span class="err">data-theme=</span><span class="s2">&#34;{{site.Params.giscus_theme}}&#34;</span>
-        <span class="err">crossorigin=</span><span class="s2">&#34;anonymous&#34;</span>
-        <span class="err">async&gt;</span>
-<span class="err">&lt;/script&gt;</span>
-<span class="err">&lt;noscript&gt;Please</span> <span class="err">enable</span> <span class="err">JavaScript</span> <span class="err">to</span> <span class="err">view</span> <span class="err">the</span> <span class="err">comments</span> <span class="err">powered</span> <span class="err">by</span> <span class="err">giscus.&lt;/noscript&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://giscus.app/client.js&#34;</span>
+        <span class="na">data-repo</span><span class="o">=</span><span class="s">&#34;{{site.Params.giscus_repo}}&#34;</span>
+        <span class="na">data-repo-id</span><span class="o">=</span><span class="s">&#34;{{site.Params.giscus_repo_id}}&#34;</span>
+        <span class="na">data-category</span><span class="o">=</span><span class="s">&#34;{{site.Params.giscus_category}}&#34;</span>
+        <span class="na">data-category-id</span><span class="o">=</span><span class="s">&#34;{{site.Params.giscus_category_id}}&#34;</span>
+        <span class="na">data-mapping</span><span class="o">=</span><span class="s">&#34;{{site.Params.giscus_mapping}}&#34;</span>
+        <span class="na">data-reactions-enabled</span><span class="o">=</span><span class="s">&#34;{{site.Params.giscus_reactions_enabled}}&#34;</span>
+        <span class="na">data-theme</span><span class="o">=</span><span class="s">&#34;{{site.Params.giscus_theme}}&#34;</span>
+        <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span>
+        <span class="na">async</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">noscript</span><span class="p">&gt;</span>Please enable JavaScript to view the comments powered by giscus.<span class="p">&lt;/</span><span class="nt">noscript</span><span class="p">&gt;</span>
 </code></pre></div><p>Finally I added the following line at the bottom of the file <code>layouts/partials/footer.html</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span><span class="err">{</span> <span class="err">if</span> <span class="err">.Params.giscus</span> <span class="p">}</span><span class="err">}</span><span class="p">{</span><span class="err">{</span> <span class="err">partial</span> <span class="nt">&#34;giscus.html&#34;</span> <span class="err">.</span> <span class="p">}</span><span class="err">}</span><span class="p">{</span><span class="err">{</span> <span class="err">end</span> <span class="p">}</span><span class="err">}</span>
 </code></pre></div><p>Now if you set <code>giscus: true</code> in the header of a post (similar to the MathJax solution above), comments should appear on that post.</p>
